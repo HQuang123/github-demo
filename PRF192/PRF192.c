@@ -1,33 +1,28 @@
-/* file pointer_demo5.c */ #include <stdio.h>
-
+/* file pointer_demo5.c */ 
+#include <stdio.h>
 #include <math.h>
-int isFibonacci();
-int isFibonacci(int n){
-	int t1,t2,f;
-	t1 = 1;
-	t2 = 1;
-	f = 1;
-	while(f<n){
-		f=t1+t2;
-		t1 = t2;
-		t2 = f;
-	};
-	if(n==f){return 1;
+int gcd(int a, int b){
+	while(a!=b){
+		if (a>b){a-=b;
+		}
+		else{b-=a;
+		}
 	}
-	else{return 0;
-	};
 }
 
+int lcm(int a, int b){
+	return a*b/gcd(a,b);
+}
+
+
 int main(){
-	int n;
+	int a,b;
 	do {
-		scanf("%d", &n);
+		scanf("%d %d", &a, &b);
 	}
-	while(n<0);
-	if(isFibonacci(n)==1){printf("N is Fibo element");
-	}
-	else{printf("N is not Fibo element");
-	}
+	while(a<0||b<0);
+	printf("The greatest common divisor is %d", gcd(a,b));
+	printf("The least common multiple is %d", lcm(a,b));
 	return 0;
 }
 
