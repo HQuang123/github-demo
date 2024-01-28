@@ -1,19 +1,21 @@
 /* file pointer_demo5.c */ #include <stdio.h>
 
 #include <math.h>
-int fibonacci();
-int fibonacci(int n){
+int isFibonacci();
+int isFibonacci(int n){
 	int t1,t2,f;
-	int i;
 	t1 = 1;
 	t2 = 1;
 	f = 1;
-	for(i=3;i<=n;i++){
+	while(f<n){
 		f=t1+t2;
 		t1 = t2;
 		t2 = f;
 	};
-	return f;
+	if(n==f){return 1;
+	}
+	else{return 0;
+	};
 }
 
 int main(){
@@ -22,7 +24,10 @@ int main(){
 		scanf("%d", &n);
 	}
 	while(n<0);
-	printf("%d",fibonacci(n));
+	if(isFibonacci(n)==1){printf("N is Fibo element");
+	}
+	else{printf("N is not Fibo element");
+	}
 	return 0;
 }
 
