@@ -1,6 +1,6 @@
 [Project]
-FileName=sumOfIntegers.dev
-Name=sumOfIntegers
+FileName=WK232.c.dev
+Name=WK232.c
 Type=1
 Ver=2
 ObjFiles=
@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=sumOfIntegers.c
+FileName=WK232.c
 CompileCpp=0
 Folder=
 Compile=1

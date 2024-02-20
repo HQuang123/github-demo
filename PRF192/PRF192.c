@@ -1,30 +1,17 @@
-/* file pointer_demo5.c */ 
 #include <stdio.h>
-#include <math.h>
-int gcd(int a, int b){
-	while(a!=b){
-		if (a>b){a-=b;
-		}
-		else{b-=a;
-		}
-	}
-}
-
-int lcm(int a, int b){
-	return a*b/gcd(a,b);
-}
+#define MAXN 100
+//Prototypes
 
 
 int main(){
-	int a,b;
-	do {
-		scanf("%d %d", &a, &b);
+	int a[] = {1,3,5,7,9,2,4,6,8,0};
+	int index = 4;
+	int i;
+	for(i = index; i<= 9 ; i++ ){
+		a[i] = a[i+1];
 	}
-	while(a<0||b<0);
-	printf("The greatest common divisor is %d", gcd(a,b));
-	printf("The least common multiple is %d", lcm(a,b));
+	for (i = 0; i<=8 ; i++){
+		printf("%d ", a[i]);
+	}
 	return 0;
 }
-
-
-
