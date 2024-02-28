@@ -7,8 +7,7 @@ int prime(int n){
 			break;
 		}
 		
-	};
-	return 0;
+	}
 }
 
 double factorial(int n){
